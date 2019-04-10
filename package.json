@@ -1,0 +1,16 @@
+{
+  "name": "fixprintvue-pdf",
+  "version": "1.0.0",
+  "description": "fix print repackage based on vue-pdf ",
+  "main": "src/vuePdfNoSss.vue",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "fix",
+    "print",
+    "vue-pdf@4.0.6"
+  ],
+  "author": "jianghan",
+  "license": "ISC"
+}
