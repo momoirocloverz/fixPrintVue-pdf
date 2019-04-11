@@ -78,7 +78,7 @@ export default function(PDFJS) {
 
 
 			var printContainerElement = document.createElement('div');
-			printContainerElement.setAttribute('id', 'print-container');
+			printContainerElement.setAttribute('id', 'repack-print-container');
 
 			function removePrintContainer() {
 				printContainerElement.parentNode.removeChild(printContainerElement);
@@ -110,13 +110,13 @@ export default function(PDFJS) {
 						'@supports ((size:A4) and (size:1pt 1pt)) {' +
 							'@page { margin: 1pt; size: ' + ((viewport.width * PRINT_UNITS) / CSS_UNITS) + 'pt ' + ((viewport.height * PRINT_UNITS) / CSS_UNITS) + 'pt; }' +
 						'}' +
-						'#print-canvas { display: none }' +
+						'.repack-print-canvas { display: none }' +
 						'@media print {' +
 							'body { margin: 0 }' +
 							
-							'#print-canvas { page-break-before: avoid; page-break-after: always; page-break-inside: avoid; display: block}' +
+							'.repack-print-canvas { page-break-before: avoid; page-break-after: always; page-break-inside: avoid; display: block}' +
 
-							'body > *:not(#print-container) { display: none; }' +	
+							'body > *:not(#repack-print-container) { display: none; }' +	
 						'}'+
 
 						'@media screen {' +
@@ -140,7 +140,7 @@ export default function(PDFJS) {
 						.then(function(page) {
 							var viewport = page.getViewport(1);
 							var printCanvasElt = printContainerElement.appendChild(win.document.createElement('canvas'));
-							printCanvasElt.setAttribute('id', 'print-canvas')
+							printCanvasElt.setAttribute('class', 'repack-print-canvas')
 
 							printCanvasElt.width = (viewport.width * PRINT_UNITS);
 							printCanvasElt.height = (viewport.height * PRINT_UNITS);
@@ -160,6 +160,17 @@ export default function(PDFJS) {
 
 				Promise.all(allPages)
 				.then(function() {
+
+					console.log('hi');
+					console.log('hi');
+					console.log('hi');
+					console.log('hi');
+					console.log('hi');
+					console.log('hi');
+					console.log('hi');
+
+					console.log( document );
+
 					win.focus(); // Required for IE
 					if (win.document.queryCommandSupported('print')) {
 						win.document.execCommand('print', false, null);
