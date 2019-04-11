@@ -1,6 +1,6 @@
 {
   "name": "fixprintvue-pdf",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "fix print repackage based on vue-pdf ",
   "main": "src/vuePdfNoSss.vue",
   "scripts": {

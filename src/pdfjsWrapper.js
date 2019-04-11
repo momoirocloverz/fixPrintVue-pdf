@@ -161,16 +161,6 @@ export default function(PDFJS) {
 				Promise.all(allPages)
 				.then(function() {
 
-					console.log('hi');
-					console.log('hi');
-					console.log('hi');
-					console.log('hi');
-					console.log('hi');
-					console.log('hi');
-					console.log('hi');
-
-					console.log( document );
-
 					win.focus(); // Required for IE
 					if (win.document.queryCommandSupported('print')) {
 						win.document.execCommand('print', false, null);
