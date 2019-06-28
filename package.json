@@ -1,6 +1,6 @@
 {
   "name": "fixprintvue-pdf",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "fix print repackage based on vue-pdf ",
   "main": "src/vuePdfNoSss.vue",
   "scripts": {
@@ -9,12 +9,13 @@
   "keywords": [
     "fix",
     "print",
-    "vue-pdf@4.0.6",
+    "vue-pdf@4.0.7",
     "fixPrint"
   ],
   "dependencies": {
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "pdfjs-dist": "^2.0.943",
+    "loader-utils": "^1.2.3",
     "raw-loader": "^0.5.1",
     "vue-resize-sensor": "^2.0.0"
   },
